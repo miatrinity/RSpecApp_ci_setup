@@ -38,7 +38,7 @@ jobs:
         run: bundle exec rails db:prepare
 
       - name: Run Tests
-        run: RAILS_ENV=test bundle exec rails test:system
+        run: RAILS_ENV=test bundle exec rspec
         
       - name: Ping railsnew.io with status = SUCCESS
         run: echo "Pinging https://railsnew.io?repo_name=xxx&&finish_time=YYY&&"
